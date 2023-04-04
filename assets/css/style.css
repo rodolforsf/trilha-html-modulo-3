@@ -3,6 +3,16 @@ body, html {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* body {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100px 2800px 200px;
+    grid-template-areas: 
+        header header header
+        link main ancor
+        footer footer footer
+        ;
+} */
 ul { list-style: none; padding-left: 5px; }
 a { color:blue; text-decoration: none;}
 .bar {
@@ -11,6 +21,26 @@ a { color:blue; text-decoration: none;}
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
 }
+
+header{
+    grid-area: header;
+    display: flex;
+}
+
+header .logo img{
+    height: 50px;
+    width: 50px;
+}
+
+header .img-titulo {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+main {
+    grid-area: main;
+}
+
 .content {
     max-width: 1440px;
     margin: auto;
@@ -22,7 +52,30 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
+.article {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #CCCCCC;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.article img{
+    width: 220px;
+}
+
+.jogabilidade {
+    display: flex;
+}
+
+.jogabilidade-dois{
+    display: flex;
+}
+
 .footer {
+    grid-area: footer;
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
 }
@@ -32,7 +85,12 @@ a { color:blue; text-decoration: none;}
 }
 .sidebar {
     border-right: solid 1px #cdcdcd;
+ 
 }
 figure {
     text-align: center;
+}
+
+.sidebar {
+    position: static;
 }
